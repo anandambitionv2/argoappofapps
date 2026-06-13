@@ -12,7 +12,7 @@ argocd-apps:
       source:
         repoURL: https://github.com/anandambitionv2/argoappofapps.git
         targetRevision: main
-        path: actualapp\hellroll
+        path: actualapp/hellroll
 
       destination:
         server: https://kubernetes.default.svc

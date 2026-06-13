@@ -1,0 +1,27 @@
+argocd-apps:
+  applications:
+    childapp1:
+      
+      project: default
+
+      additionalAnnotations:
+        # Image Updater annotations
+      
+        
+
+      source:
+        repoURL: https://github.com/anandambitionv2/argoappofapps.git
+        targetRevision: main
+        path: actualapp\hellroll
+
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: default
+
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+
+        # syncOptions:
+        #   - CreateNamespace=true
